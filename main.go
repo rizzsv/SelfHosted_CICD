@@ -1,12 +1,16 @@
-package main 
+package main
 
 import (
 	"encoding/json"
 	"fmt"
-	"net/http"
 	"io"
 	"log"
+	"net/http"
+	"selfhosted-ci/config"
 	"selfhosted-ci/executor"
+	"selfhosted-ci/routes"
+
+	"github.com/gin-gonic/gin"
 )
 
 type GithubWebhook struct {
@@ -33,4 +37,10 @@ func main() {
 	http.HandleFunc("/webhook", webhookHandler)
 	fmt.Println("Server is running on port 8080")
 	log.Fatal(http.ListenAndServe(":8080", nil))
+
+	r := gin.Default()
+	config.SetupCORS(r)
+	routes.SetupRoutes(r)
+	
+	r.Run(":8080")
 }
