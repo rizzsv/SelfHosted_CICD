@@ -42,7 +42,7 @@ go run main.go
 ---
 
 ## 📁 Folder Structure|
----
+```
 ├── config/                # Konfigurasi middleware (seperti CORS)
 ├── executor/              # Eksekusi command dari webhook (shell execution)
 ├── handler/               # HTTP handler (webhook, build, dll)
@@ -58,3 +58,4 @@ go run main.go
 ├── vite.config.ts         # Konfigurasi Vite
 ├── go.mod / go.sum        # Modul Go
 └── README.md              # Dokumentasi
+```
