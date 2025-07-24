@@ -31,6 +31,21 @@ The main goal is to understand and build a simple CI/CD server without relying o
 
 ### 1. Clone the Repository
 
-```bash
 git clone https://github.com/rizzsv/SelfHosted_CICD.git
-cd SelfHosted_CICD
+cd SelfHosted_CICD.
+
+---
+
+## Run the Service
+go run main.go
+
+---
+
+## 📁 Folder Structure
+.
+├── main.go             # Entry point
+├── utils/
+│   └── deploy.go       # Shell command runner
+├── logs/
+│   └── deploy.log      # Deployment logs
+├── README.md           # Project documentation
