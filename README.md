@@ -43,19 +43,25 @@ go run main.go
 
 ## 📁 Folder Structure|
 ```
-├── config/                # Konfigurasi middleware (seperti CORS)
-├── executor/              # Eksekusi command dari webhook (shell execution)
-├── handler/               # HTTP handler (webhook, build, dll)
-├── model/                 # Struktur data / model internal
-├── routes/                # Router Go
-├── storage/               # Penyimpanan log
-├── tmp/                   # File log hasil build
-├── .bolt/                 # (Opsional) penyimpanan BoltDB
-├── src/                   # Frontend UI (Vite, Tailwind, dsb)
-├── index.html             # Entry point frontend
-├── tailwind.config.js     # Konfigurasi Tailwind CSS
-├── tsconfig*.json         # Konfigurasi TypeScript
-├── vite.config.ts         # Konfigurasi Vite
-├── go.mod / go.sum        # Modul Go
-└── README.md              # Dokumentasi
+.
+├── config/              # Konfigurasi CORS & lainnya
+│   └── cors.go
+├── executor/            # Eksekusi build dan run project
+│   └── runner.go
+├── executor logs tmp/   # Tempat log hasil eksekusi build
+├── handler/             # Penanganan webhook request
+│   ├── build.go
+│   └── webhook.go
+├── model/               # Struct model yang digunakan
+│   └── build.go
+├── routes/              # Routing untuk endpoint
+│   └── router.go
+├── storage/             # Logging utilitas
+│   └── logs.go
+├── tmp/                 # Tempat penyimpanan file build sementara
+│   └── 20250724-070439/ # Contoh folder hasil push
+├── main.go              # Entry point aplikasi
+├── go.mod
+└── go.sum
+
 ```
