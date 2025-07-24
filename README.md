@@ -41,7 +41,8 @@ go run main.go
 
 ---
 
-## 📁 Folder Structure
+## 📁 Folder Structure|
+---
 ├── config/                # Konfigurasi middleware (seperti CORS)
 ├── executor/              # Eksekusi command dari webhook (shell execution)
 ├── handler/               # HTTP handler (webhook, build, dll)
