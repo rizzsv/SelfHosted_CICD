@@ -42,10 +42,18 @@ go run main.go
 ---
 
 ## 📁 Folder Structure
-.
-├── main.go             # Entry point
-├── utils/
-│   └── deploy.go       # Shell command runner
-├── logs/
-│   └── deploy.log      # Deployment logs
-├── README.md           # Project documentation
+├── config/                # Konfigurasi middleware (seperti CORS)
+├── executor/              # Eksekusi command dari webhook (shell execution)
+├── handler/               # HTTP handler (webhook, build, dll)
+├── model/                 # Struktur data / model internal
+├── routes/                # Router Go
+├── storage/               # Penyimpanan log
+├── tmp/                   # File log hasil build
+├── .bolt/                 # (Opsional) penyimpanan BoltDB
+├── src/                   # Frontend UI (Vite, Tailwind, dsb)
+├── index.html             # Entry point frontend
+├── tailwind.config.js     # Konfigurasi Tailwind CSS
+├── tsconfig*.json         # Konfigurasi TypeScript
+├── vite.config.ts         # Konfigurasi Vite
+├── go.mod / go.sum        # Modul Go
+└── README.md              # Dokumentasi
